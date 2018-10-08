@@ -4,7 +4,7 @@ addons:
   sonarcloud:
     organization: "domheal-github"
     token:
-      secure: sonarqube-token
+      secure: ${sonarqube-token}
 script:
 # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
 - mvn clean install sonar:sonar
