@@ -3,8 +3,11 @@ jdk: openjdk8
 addons:
   sonarcloud:
     organization: "domheal-github"
-    token:
-      secure: ${sonarqube-token}
 script:
 # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-- mvn clean install sonar:sonar
+- mvn clean install sonar:sonar -Dsonar.login=${sonarqube-token}
+
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.sonar/cache'
