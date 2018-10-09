@@ -14,3 +14,5 @@ cache:
     
 notifications:
   slack: ${SLACK_TOKEN}
+    on_success: always  # change: send a notification when the build status changes.
+    on_failure: always  # always: always send a notification.
