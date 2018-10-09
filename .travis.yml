@@ -13,4 +13,4 @@ cache:
     - '$HOME/.sonar/cache'
     
 notifications:
-  slack: ${SLACK_TOKEN}
+  slack: ${SLACK_TOKEN}#builds
